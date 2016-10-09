@@ -143,7 +143,7 @@ public class DepthSourceManager : MonoBehaviour
 				float pitch = 0;
 				if (vol > 1)
 					vol = 1;
-				pitch = vol * 6 - 3;		
+				//pitch = vol * 6 - 3;		
 				
 			//	if (vol < 0.5)
 			//		vol = 0;
@@ -154,16 +154,22 @@ public class DepthSourceManager : MonoBehaviour
 
 
 				if (!audioL.isPlaying) {
+					
 					audioL.volume = vol;
-					audioL.pitch = pitch;
+					//audioL.pitch = pitch;
 					audioL.Play ();
-
+					audioL.time = 13.21f;
 				}
+
+				if (audioL.time > 16.00f) {
+					audioL.Stop ();
+				}
+
 
 				vol=(float)(twoDArray [200, 300] / 5);
 				if (vol > 1)
 					vol = 1;
-				pitch = vol * 6 - 3;	
+				//pitch = vol * 6 - 3;	
 			//	if (vol < 0.5)
 			//		vol = 0;
 		//		Debug.Log (vol);
@@ -174,14 +180,19 @@ public class DepthSourceManager : MonoBehaviour
 
 				if (!audioM.isPlaying) {
 					audioM.volume = vol;
-					audioL.pitch = pitch;
+					//audioL.pitch = pitch;
 					audioM.Play ();
+					audioM.time = 13.21f;
+				}
+
+				if (audioM.time > 16.00f) {
+					audioM.Stop ();
 				}
 
 				vol=(float)(twoDArray [200, 450] / 5);
 				if (vol > 1)
 					vol = 1;
-				pitch = vol * 6 - 3;	
+				//pitch = vol * 6 - 3;	
 			//	if (vol < 0.5)
 			//		vol = 0;
 		//		Debug.Log (vol);
@@ -192,8 +203,13 @@ public class DepthSourceManager : MonoBehaviour
 
 				if (!audioL.isPlaying) {
 					audioR.volume = vol;
-					audioL.pitch = pitch;
+					//audioL.pitch = pitch;
 					audioR.Play ();
+					audioR.time = 13.21f;
+				}
+
+				if (audioR.time > 16.00f) {
+					audioR.Stop ();
 				}
 				frame.Dispose();
 				frame = null;
