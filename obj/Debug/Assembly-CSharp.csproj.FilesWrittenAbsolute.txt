@@ -1,0 +1,17 @@
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/UnityEngine.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/UnityEditor.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/MathNet.Numerics.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/System.Threading.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Mono.Cecil.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Unity.DataContract.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/juwang/Desktop/mhacks/Sound-Sense/Temp/bin/Debug/Mono.Cecil.Mdb.dll

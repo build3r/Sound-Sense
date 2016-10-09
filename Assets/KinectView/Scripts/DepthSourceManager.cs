@@ -2,13 +2,14 @@
 using System.Collections;
 using Windows.Kinect;
 using System.Threading;
+using System;
 
 public class DepthSourceManager : MonoBehaviour
 {   
     private KinectSensor _Sensor;
     private DepthFrameReader _Reader;
     private ushort[] _Data;
-	private int i=0;
+	private int count=0;
 	private byte[] depthPixels;
 	private ushort minDepth;
 	private ushort maxDepth;
@@ -53,7 +54,8 @@ public class DepthSourceManager : MonoBehaviour
 				sum += twoDArray [i,j];
 			}
 		}
-		ushort average = (ushort)(sum / ((xMax - xMin + 1) * (yMax - yMin + 1)));
+		ushort average = (ushort)(sum / ((xMax - xMin ) * (yMax - yMin )));
+	//	Debug.Log (average);
 		for (int i = xMin; i < xMax; i++) {
 			for (int j = yMin; j < yMax; j++) {
 				twoDArray [i,j] = average;
@@ -62,17 +64,42 @@ public class DepthSourceManager : MonoBehaviour
 
 	}
 
+	double[,] intensityCalc(ushort[][] twoDArray){
+		double[,] result = new double[424,512];
+		for (int x = 0; x < 424; x++){
+			for (int y = 0; y < 512; y++) {
+				int depth = twoDArray[x][y];
+				int absx = Math.Abs (x - 212);
+				int absy = Math.Abs (y - 256);
+				double distance = 10 / (Math.Log ((depth / 10) * (depth / 10) + (absx * depth / 10000) * (absx * depth / 10000) + (absy * depth / 10000) * (absy * depth / 10000)));
+				if (distance > 1) {
+					distance = 1;
+				}
+				result[x,y] = distance;
+			}
+		}
+		return result;
+	}
+
+	double intensityCalc_S(int x,int y,int depth){
+		int absx = Math.Abs (x - 212);
+		int absy = Math.Abs (y - 256);
+		double distance = 10 / (Math.Log ((depth / 10) * (depth / 10) + (absx * depth / 10000) * (absx * depth / 10000) + (absy * depth / 10000) * (absy * depth / 10000)));
+		if (distance > 1) {
+			distance = 1;
+		}
+		return distance;
+	}
 
     void Update () 
     {
         if (_Reader != null)
-        {
+		{  
             var frame = _Reader.AcquireLatestFrame();
             if (frame != null)
             {
                 frame.CopyFrameDataToArray(_Data);
 				twoDArray = new ushort[424,512];
-
 				for (int x = 0; x < 424; x++) {
 					for (int y = 0; y < 512; y++) {
 						twoDArray [x, y] = _Data [x * 512 + y];
@@ -94,7 +121,7 @@ public class DepthSourceManager : MonoBehaviour
 					}
 					j = j + jGap;
 				}
-				int aCount = 0;
+				//int aCount = 0;
 
 				/*
 				for (int z=50; z<512; z+=100){
@@ -112,21 +139,62 @@ public class DepthSourceManager : MonoBehaviour
 				}
 */
 
-				int vol=(int)twoDArray [200, 150] / 1000;
+				float vol=(float)(twoDArray [200, 150] / 5);
+				float pitch = 0;
 				if (vol > 1)
 					vol = 1;
-				audioL.volume = vol;
-				audioL.Play ();
-				 vol=(int)twoDArray [200, 300] / 1000;
+				pitch = vol * 6 - 3;		
+				
+			//	if (vol < 0.5)
+			//		vol = 0;
+		//		Debug.Log (vol);
+		//		Debug.Log ("left");
+				//float vol = (float)intensityCalc_S(200,150,twoDArray[200,150]);
+				//Debug.Log (vol);
+
+
+				if (!audioL.isPlaying) {
+					audioL.volume = vol;
+					audioL.pitch = pitch;
+					audioL.Play ();
+
+				}
+
+				vol=(float)(twoDArray [200, 300] / 5);
 				if (vol > 1)
 					vol = 1;
-				audioM.volume = vol;
-				audioM.Play ();
-				 vol=(int)twoDArray [200, 450] / 1000;
+				pitch = vol * 6 - 3;	
+			//	if (vol < 0.5)
+			//		vol = 0;
+		//		Debug.Log (vol);
+		//		Debug.Log ("mid");
+				//vol = (float)intensityCalc_S(200,300,twoDArray[200,300]);
+				//Debug.Log (vol);
+
+
+				if (!audioM.isPlaying) {
+					audioM.volume = vol;
+					audioL.pitch = pitch;
+					audioM.Play ();
+				}
+
+				vol=(float)(twoDArray [200, 450] / 5);
 				if (vol > 1)
 					vol = 1;
-				audioR.volume = vol;
-				audioR.Play ();
+				pitch = vol * 6 - 3;	
+			//	if (vol < 0.5)
+			//		vol = 0;
+		//		Debug.Log (vol);
+		//		Debug.Log ("right");
+				//vol = (float)intensityCalc_S(200,450,twoDArray[200,450]);
+				//Debug.Log (vol);
+
+
+				if (!audioL.isPlaying) {
+					audioR.volume = vol;
+					audioL.pitch = pitch;
+					audioR.Play ();
+				}
 				frame.Dispose();
 				frame = null;
 
