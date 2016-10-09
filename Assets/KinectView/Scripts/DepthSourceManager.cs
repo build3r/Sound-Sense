@@ -41,6 +41,19 @@ public class DepthSourceManager : MonoBehaviour
         }
     }
     
+
+	float averageOut(int xMin,int xMax,int yMin,int yMax, ushort[][] twoDArray){
+		float sum = 0;
+		for (int i = xMin; i < xMax; i++) {
+			for (int j = yMin; j < yMax; j++) {
+				sum += twoDArray [i] [j];
+			}
+		}
+		float result = sum / ((xMax - xMin + 1) * (yMax - yMin + 1));
+		return result;
+	}
+
+
     void Update () 
     {
         if (_Reader != null)
@@ -57,6 +70,14 @@ public class DepthSourceManager : MonoBehaviour
                     {
 						twoDArray[x,y]=_Data[x*512+y];
                     }
+
+				averageOut (0, 100, 0, 100, twoDArray);
+				averageOut (0, 100, 101, 201, twoDArray);
+				averageOut (0, 100, 202,123 , twoDArray);
+				averageOut (0, 100, 0, 100, twoDArray);
+
+
+
 		//		if (i / 20 == 1) {
 	//				i = 0;
                     //

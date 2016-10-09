@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\KinectView\Scripts\DepthSourceManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\KinectView\Scripts\DepthSourceView.cs">
     <Files>
       <File FileName="Assets\KinectView\Scripts\DepthSourceView.cs" Line="40" Column="28" />
-      <File FileName="Assets\KinectView\Scripts\DepthSourceManager.cs" Line="55" Column="44" />
+      <File FileName="Assets\KinectView\Scripts\DepthSourceManager.cs" Line="77" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
