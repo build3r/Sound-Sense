@@ -60,6 +60,7 @@
      <Compile Include="Assets\Phonon\Phonon 3D\Phonon3DSource.cs" />
      <Compile Include="Assets\RealDepth.cs" />
      <Compile Include="Assets\moves.cs" />
+     <None Include="Assets\KinectView\WriteLines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
