@@ -12,6 +12,7 @@ public class DepthSourceManager : MonoBehaviour
 	private ushort minDepth;
 	private ushort maxDepth;
 	private const int MapDepthToByte = 8000 / 256;
+	private ushort[,] twoDArray;
 
     public ushort[] GetData()
     {
@@ -50,21 +51,26 @@ public class DepthSourceManager : MonoBehaviour
                 frame.CopyFrameDataToArray(_Data);
                 frame.Dispose();
                 frame = null;
-
-				if (i / 20 == 1) {
-					i = 0;
-
-					for (int j = 0; j < _Data.Length; j++) {
-						depthPixels [j] = (byte)(_Data[j] >= minDepth && _Data[j] <= maxDepth ? (_Data[j] / MapDepthToByte) : 0);
-					}
-					string[] temp = new string[_Data.Length];
-					for (int j = 0; j < _Data.Length; j++) {
-						temp [j] = _Data [j].ToString ();
-					}
-					System.IO.File.WriteAllLines (@"C:\Users\Administrator\Desktop\WriteLines.txt", temp);
-				} else {
-					i++;
-				}
+				twoDArray = new ushort[424,512];
+                for (int x=0; x < 424; x++)
+                    for (int y = 0; y < 512; y++)
+                    {
+						twoDArray[x,y]=_Data[x*512+y];
+                    }
+		//		if (i / 20 == 1) {
+	//				i = 0;
+                    //
+					//for (int j = 0; j < _Data.Length; j++) {
+				//		depthPixels [j] = (byte)(_Data[j] >= minDepth && _Data[j] <= maxDepth ? (_Data[j] / MapDepthToByte) : 0);
+			//		}
+			//		string[] temp = new string[_Data.Length];
+			//		for (int j = 0; j < _Data.Length; j++) {
+			//			temp [j] = _Data [j].ToString ();
+			//		}
+	//				System.IO.File.WriteAllLines (@"C:\Users\Administrator\Desktop\WriteLines.txt", temp);
+		//		} else {
+			//		i++;
+		//		}
             }
         }
     }

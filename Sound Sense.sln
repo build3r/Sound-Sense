@@ -1,11 +1,13 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sound Sense.CSharp.Plugins", "Sound Sense.CSharp.Plugins.csproj", "{81492660-078A-6517-AAD7-13F8BCF114AA}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{57F03FB8-0CB4-B53A-C392-5C7DB51DFB07}") = "Sound Sense", "Assembly-CSharp-firstpass.csproj", "{FDD6C543-2AF5-79EB-5B86-06780E18508C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sound Sense.CSharp", "Sound Sense.CSharp.csproj", "{FA628150-8BB0-44BD-B2AF-52D4E2C88CB4}"
+Project("{57F03FB8-0CB4-B53A-C392-5C7DB51DFB07}") = "Sound Sense", "Assembly-CSharp.csproj", "{27278735-3108-B2CC-DEF9-0C9F6B3F9F6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sound Sense.CSharp.Editor.Plugins", "Sound Sense.CSharp.Editor.Plugins.csproj", "{9D7C4753-0B62-2ABF-25B3-B330F6688722}"
+Project("{57F03FB8-0CB4-B53A-C392-5C7DB51DFB07}") = "Sound Sense", "Assembly-CSharp-Editor-firstpass.csproj", "{29C4479D-8EB6-D82A-E808-58F3E6217695}"
+EndProject
+Project("{57F03FB8-0CB4-B53A-C392-5C7DB51DFB07}") = "Sound Sense", "Assembly-CSharp-Editor.csproj", "{DE416E0F-3977-E12A-8B24-CB2331707487}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +15,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{81492660-078A-6517-AAD7-13F8BCF114AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81492660-078A-6517-AAD7-13F8BCF114AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81492660-078A-6517-AAD7-13F8BCF114AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81492660-078A-6517-AAD7-13F8BCF114AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA628150-8BB0-44BD-B2AF-52D4E2C88CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA628150-8BB0-44BD-B2AF-52D4E2C88CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA628150-8BB0-44BD-B2AF-52D4E2C88CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA628150-8BB0-44BD-B2AF-52D4E2C88CB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D7C4753-0B62-2ABF-25B3-B330F6688722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D7C4753-0B62-2ABF-25B3-B330F6688722}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D7C4753-0B62-2ABF-25B3-B330F6688722}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D7C4753-0B62-2ABF-25B3-B330F6688722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD6C543-2AF5-79EB-5B86-06780E18508C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD6C543-2AF5-79EB-5B86-06780E18508C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD6C543-2AF5-79EB-5B86-06780E18508C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD6C543-2AF5-79EB-5B86-06780E18508C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27278735-3108-B2CC-DEF9-0C9F6B3F9F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27278735-3108-B2CC-DEF9-0C9F6B3F9F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27278735-3108-B2CC-DEF9-0C9F6B3F9F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27278735-3108-B2CC-DEF9-0C9F6B3F9F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C4479D-8EB6-D82A-E808-58F3E6217695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C4479D-8EB6-D82A-E808-58F3E6217695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C4479D-8EB6-D82A-E808-58F3E6217695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C4479D-8EB6-D82A-E808-58F3E6217695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE416E0F-3977-E12A-8B24-CB2331707487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE416E0F-3977-E12A-8B24-CB2331707487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE416E0F-3977-E12A-8B24-CB2331707487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE416E0F-3977-E12A-8B24-CB2331707487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
