@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Windows.Kinect;
-
+using System;
 public class DepthSourceManager : MonoBehaviour
 {   
     private KinectSensor _Sensor;
@@ -53,6 +53,22 @@ public class DepthSourceManager : MonoBehaviour
 		return result;
 	}
 
+	double[,] intensityCalc(ushort[][] twoDArray){
+		double[,] result = new double[424,512];
+		for (int x = 0; x < 424; x++){
+			for (int y = 0; y < 512; y++) {
+				int depth = twoDArray[x][y];
+				int absx = Math.Abs (x - 212);
+				int absy = Math.Abs (y - 256);
+				double distance = 10 / (Math.Log ((depth / 10) * (depth / 10) + (absx * depth / 10000) * (absx * depth / 10000) + (absy * depth / 10000) * (absy * depth / 10000)));
+				if (distance > 1) {
+					distance = 1;
+				}
+				result[x,y] = distance;
+			}
+		}
+		return result;
+	}
 
     void Update () 
     {
