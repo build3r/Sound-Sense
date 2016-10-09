@@ -72,10 +72,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="MathNet.Numerics">
- <HintPath>C:/Users/Administrator/Documents/Sound Sense/Assets/MathNet.Numerics.dll</HintPath>
+ <HintPath>C:/Users/Administrator/Desktop/Sound Sense/Assets/MathNet.Numerics.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading">
- <HintPath>C:/Users/Administrator/Documents/Sound Sense/Assets/System.Threading.dll</HintPath>
+ <HintPath>C:/Users/Administrator/Desktop/Sound Sense/Assets/System.Threading.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

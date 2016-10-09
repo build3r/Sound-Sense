@@ -161,7 +161,7 @@ public class DepthSourceManager : MonoBehaviour
 					audioL.time = 13.21f;
 				}
 
-				if (audioL.time > 16.00f) {
+				if (audioL.time > 14.20f) {
 					audioL.Stop ();
 				}
 
@@ -185,7 +185,7 @@ public class DepthSourceManager : MonoBehaviour
 					audioM.time = 13.21f;
 				}
 
-				if (audioM.time > 16.00f) {
+				if (audioM.time > 14.20f) {
 					audioM.Stop ();
 				}
 
@@ -208,7 +208,7 @@ public class DepthSourceManager : MonoBehaviour
 					audioR.time = 13.21f;
 				}
 
-				if (audioR.time > 16.00f) {
+				if (audioR.time > 14.20f) {
 					audioR.Stop ();
 				}
 				frame.Dispose();

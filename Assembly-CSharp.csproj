@@ -68,10 +68,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="MathNet.Numerics">
- <HintPath>C:/Users/Administrator/Documents/Sound Sense/Assets/MathNet.Numerics.dll</HintPath>
+ <HintPath>C:/Users/Administrator/Desktop/Sound Sense/Assets/MathNet.Numerics.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading">
- <HintPath>C:/Users/Administrator/Documents/Sound Sense/Assets/System.Threading.dll</HintPath>
+ <HintPath>C:/Users/Administrator/Desktop/Sound Sense/Assets/System.Threading.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
